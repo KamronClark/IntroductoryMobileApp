@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment3.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#00471B" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Giannis Info!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <ListView HorizontalOptions="CenterAndExpand" ItemTapped="ListView_ItemTapped">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>About</x:String>
+                    <x:String>Favorite Plays</x:String>
+                    <x:String>Gallery</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

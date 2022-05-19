@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Assignment3.GalleryPage">
+    <ContentPage.Content>
+        <CarouselView x:Name="GalleryList" ItemsSource="{Binding GiannisGallery}">
+    <CarouselView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Frame HasShadow="True"
+                       BorderColor="#00471B"
+                       CornerRadius="5"
+                       Margin="20"
+                       HeightRequest="700"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="{Binding Name}"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        <Image Source="{Binding ImageUrl}"
+                               Aspect="AspectFill"
+                               HeightRequest="600"
+                               WidthRequest="300"
+                               HorizontalOptions="Center" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+    </ContentPage.Content>
+</ContentPage>

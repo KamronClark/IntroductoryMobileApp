@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Assignment3.FavoritePlaysPage">
+    
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1500"/>
+            </Grid.RowDefinitions>
+       
+            <ListView x:Name="GiannisList" HasUnevenRows="True" ItemsSource="{Binding GiannisPlays}" Margin="20,0" Grid.Row="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="170"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" Grid.Column="0"
+                                       FontSize="13" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="0"/>
+                                <Label Text="{Binding Description}" FontAttributes="Bold" Grid.Column="1"
+                                       FontSize="12" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="0"/>
+                                <Image Source="{Binding Url}" HorizontalOptions="End" Grid.Column="2" Grid.Row="0">
+                                </Image>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
